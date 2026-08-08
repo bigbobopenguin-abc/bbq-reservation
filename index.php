@@ -1,8 +1,10 @@
 <?php
+session_start();
 require_once 'dbinfo.php';
 
 $pits = [];
 $result = $mysqli->query("SELECT pit_id, name, location, capacity, price_per_session, image_path FROM bbq_pits WHERE status = 'active' LIMIT 3");
+
 if ($result) {
     while ($row = $result->fetch_assoc()) {
         $pits[] = $row;
@@ -22,7 +24,7 @@ if ($result) {
 </head>
 <body>
 
-<?php session_start(); include_once("header.php") ?>
+<?php include_once("header.php"); ?>
 
 <!--  HERO  -->
 <section class="hero">
