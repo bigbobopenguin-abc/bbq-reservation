@@ -1,0 +1,196 @@
+.account-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ---------- Sidebar ---------- */
+.account-sidebar {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    padding: 0.6rem;
+    flex-shrink: 0;
+}
+
+.account-sidebar nav {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 0.3rem;
+}
+
+.account-sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.account-sidebar a svg { color: var(--color-muted); flex-shrink: 0; }
+
+.account-sidebar a:hover {
+    background: #f4f1ec;
+}
+
+.account-sidebar a.active {
+    background: rgba(232, 117, 43, 0.1);
+    color: var(--color-accent);
+}
+.account-sidebar a.active svg { color: var(--color-accent); }
+
+/* ---------- Main panel ---------- */
+.account-main h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.account-subtitle {
+    color: var(--color-muted);
+    font-size: 0.85rem;
+    margin-bottom: 1.3rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-muted);
+    margin-bottom: 1rem;
+}
+.back-link:hover { color: var(--color-accent); }
+
+.account-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+/* ---------- View mode: field rows ---------- */
+.account-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.account-field.no-border {
+    border-bottom: none;
+    margin-bottom: 1.3rem;
+}
+
+.field-label {
+    font-size: 0.78rem;
+    color: var(--color-muted);
+    font-weight: 600;
+}
+
+.field-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* ---------- Edit mode: form ---------- */
+.form-group {
+    margin-bottom: 1.1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.65em 0.9em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 0.7rem;
+}
+
+.edit-actions .btn {
+    flex: 1;
+    text-align: center;
+}
+
+/* ---------- Note box ---------- */
+.account-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    background: #f4f1ec;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin-top: 1.2rem;
+    font-size: 0.82rem;
+    color: var(--color-muted);
+}
+
+.account-note svg {
+    color: var(--color-accent);
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.account-note strong {
+    display: block;
+    color: var(--color-text);
+    margin-bottom: 0.3rem;
+}
+
+.account-note ul {
+    padding-left: 1.1rem;
+    list-style: disc;
+}
+
+@media (min-width: 768px) {
+    .account-page {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .account-sidebar {
+        width: 220px;
+    }
+
+    .account-sidebar nav {
+        flex-direction: column;
+    }
+
+    .account-main {
+        flex: 1;
+    }
+}

@@ -1,0 +1,178 @@
+.booking-card {
+    max-width: 440px;
+    margin: 2rem auto 3rem;
+    background: #fff;
+    border-radius: 20px;
+    padding: 1.6rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Header row */
+.booking-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 1.4rem;
+}
+
+.booking-card-header h1 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.back-btn {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #f4f1ec;
+    color: var(--color-dark);
+}
+.back-btn:hover { background: #eee; }
+
+/* Pit info row */
+.pit-info-row {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding-bottom: 1.3rem;
+    margin-bottom: 1.3rem;
+    border-bottom: 1px solid #eee;
+}
+
+.pit-thumb {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    background-color: #cfd8c5;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(160deg, #d8e0cd, #b7c4a8);
+}
+
+.pit-info-text h2 {
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+}
+
+.pit-info-text p {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+}
+
+/* Detail rows (Capacity / Price) */
+.booking-detail-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-label {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    font-weight: 600;
+}
+
+.detail-value {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.detail-value svg { color: var(--color-accent); }
+
+.price-row {
+    border-bottom: none;
+    margin-bottom: 1.4rem;
+}
+
+.detail-value.price {
+    color: var(--color-accent);
+    font-size: 1.1rem;
+}
+
+.detail-value.price .unit {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--color-muted);
+}
+
+/*  Section label  */
+.section-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin: 1.2rem 0 0.7rem;
+}
+
+/* Pill fields (date / time inputs)  */
+.pill-field {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #f6f4f0;
+    border: 1px solid #ece8e1;
+    border-radius: 14px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.pill-field svg { color: var(--color-muted); flex-shrink: 0; }
+
+.pill-field input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+    color: var(--color-text);
+    width: 100%;
+}
+
+.pill-field input:focus {
+    outline: none;
+}
+
+.pill-field:focus-within {
+    border-color: var(--color-accent);
+}
+
+.pill-field-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.pill-field-row .pill-field {
+    flex: 1;
+}
+
+.pill-field-sep {
+    color: var(--color-muted);
+    font-weight: 600;
+}
+
+/* Pill button */
+.btn-pill {
+    border-radius: 999px;
+    padding: 0.95em;
+    font-size: 0.95rem;
+    margin-top: 0.6rem;
+}
+
+@media (min-width: 768px) {
+    .booking-card {
+        padding: 2rem 2.2rem;
+    }
+}

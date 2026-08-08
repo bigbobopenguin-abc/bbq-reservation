@@ -1,0 +1,50 @@
+.confirm-card {
+    text-align: center;
+}
+
+.confirm-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background: rgba(34, 158, 89, 0.1);
+    color: #229e59;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm-icon-danger {
+    background: rgba(192, 57, 43, 0.1);
+    color: #c0392b;
+}
+
+.confirm-icon-neutral {
+    background: rgba(107, 102, 96, 0.12);
+    color: var(--color-muted);
+}
+
+.confirm-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.confirm-sub {
+    color: var(--color-muted);
+    font-size: 0.85rem;
+    margin-bottom: 1.6rem;
+}
+
+.confirm-card .pit-info-row {
+    text-align: left;
+}
+
+.confirm-card .booking-detail-row:last-of-type {
+    margin-bottom: 1.4rem;
+}
+
+.confirm-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}

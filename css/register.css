@@ -1,0 +1,314 @@
+.register-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ---------- LEFT VISUAL PANEL ---------- */
+.register-visual {
+    position: relative;
+    background: linear-gradient(160deg, #2b2521, #1c1815);
+    color: #fff;
+    padding: 3rem 2rem;
+    overflow: hidden;
+}
+
+.register-visual-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(217,119,87,0.25), transparent 60%);
+    pointer-events: none;
+}
+
+.register-visual-content {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.register-visual-title {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.register-visual-title .text-accent {
+    color: var(--color-accent);
+}
+
+.register-visual-desc {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.register-feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.register-feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+}
+
+.register-feature-list strong {
+    display: block;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.2rem;
+}
+
+.register-feature-list span {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.5;
+}
+
+.feature-icon {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+}
+
+/*  RIGHT FORM PANEL */
+.register-form-panel {
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem 1.2rem 3.5rem;
+}
+
+.register-form-card {
+    width: 100%;
+    max-width: 460px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 1.8rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.register-form-header {
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+.header-icon {
+    color: var(--color-accent);
+    margin-bottom: 0.4rem;
+}
+
+.register-form-header h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.register-form-sub {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+}
+
+/* ---------- ERROR BOX ---------- */
+.error-box {
+    background: #fdecea;
+    border: 1px solid #f4c7c3;
+    color: #9c2a1f;
+    border-radius: 12px;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.85rem;
+}
+
+.error-box ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.error-box li {
+    margin-bottom: 0.2rem;
+}
+
+/* ---------- FORM FIELDS ---------- */
+.form-group {
+    margin-bottom: 1.1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--color-text);
+}
+
+.input-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #f6f4f0;
+    border: 1px solid #ece8e1;
+    border-radius: 14px;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.15s ease;
+}
+
+.input-with-icon:focus-within {
+    border-color: var(--color-accent);
+}
+
+.input-with-icon svg {
+    color: var(--color-muted);
+    flex-shrink: 0;
+}
+
+.input-with-icon input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+    color: var(--color-text);
+}
+
+.input-with-icon input:focus {
+    outline: none;
+}
+
+.toggle-password {
+    flex-shrink: 0;
+    border: none;
+    background: transparent;
+    color: var(--color-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+}
+
+.toggle-password:hover {
+    color: var(--color-text);
+}
+
+textarea {
+    width: 100%;
+    background: #f6f4f0;
+    border: 1px solid #ece8e1;
+    border-radius: 14px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+    color: var(--color-text);
+    resize: vertical;
+    min-height: 80px;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.field-error {
+    display: block;
+    font-size: 0.78rem;
+    color: #c0392b;
+    margin-top: 0.35rem;
+    min-height: 1em;
+}
+
+/* ---------- BUTTON ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.9em 1.4em;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.btn-accent {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+.btn-accent:hover {
+    filter: brightness(0.94);
+}
+
+.btn-block {
+    width: 100%;
+    margin-top: 0.4rem;
+}
+
+.register-login-link {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-top: 1rem;
+}
+
+.register-login-link a {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-login-link a:hover {
+    text-decoration: underline;
+}
+
+.register-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-top: 1.4rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid #eee;
+    font-size: 0.78rem;
+    color: var(--color-muted);
+    line-height: 1.5;
+}
+
+.register-note svg {
+    flex-shrink: 0;
+    color: var(--color-accent);
+    margin-top: 0.1rem;
+}
+
+@media (min-width: 768px) {
+    .register-page {
+        flex-direction: row;
+        min-height: 100vh;
+    }
+
+    .register-visual {
+        flex: 1 1 42%;
+        display: flex;
+        align-items: flex-start;
+        padding: 4rem 3rem;
+    }
+
+    .register-form-panel {
+        flex: 1 1 58%;
+        align-items: center;
+        padding: 3rem;
+    }
+}
